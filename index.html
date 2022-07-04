@@ -123,8 +123,8 @@
 
     window.onscroll = function() {
         /* Check if the current Y offset
-            is greater than the position of
-            the element */
+              is greater than the position of
+              the element */
         if (window.pageYOffset > currStickyPos) {
             stickyElem.style.position = "fixed";
             stickyElem.style.top = "0px";
@@ -132,6 +132,7 @@
             stickyElem.style.position = "relative";
             stickyElem.style.top = "initial";
             stickyElem.style.background = "white";
+            stickyElem.style.width = "100%";
         }
     };
 </script>
