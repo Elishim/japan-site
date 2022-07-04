@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive navbar</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="mobile">
+    <nav>
+        <div class="sticky-div">
+            <div class="container nav-wrapper">
+                <div class="brand">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"></svg>
+                    <span><strong>LOGO</strong></span>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">Qui sommes nous ? </a></li>
+                    <li>
+                        <a href="#">Acheter</a>
+                        <ul class="dropdown-list">
+                            <li><a href="#riz">Riz</a></li>
+                            <li><a href="#boissons">Boissons</a></li>
+                            <li><a href="#box">Box</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Nous contacter</a></li>
+                    <li>
+                        <button class="btn">Connection</button>
+                    </li>
+                    <li>
+                        <button class="btn">Inscription</button>
+                    </li>
+                    <li class="cadi"><a href="#">Pannier</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="header container">
+            <div>
+                <h1>Bienvenue sur japan shop france</h1>
+                <h4>Des échanges franco-japonnais au profit de tous !</h4>
+            </div>
+        </section>
+        <section class="shop">
+            <h1>Nos riz</h1>
+            <div class="types" id="riz">
+                <div class="article">
+                    <h1>shinode</h1>
+                    <img class="produit" src="onigiri.png" alt="" />
+                    <h2>prix</h2>
+                </div>
+                <div class="article">
+                    <h1>shinode</h1>
+                    <img class="produit" src="onigiri.png" alt="" />
+                    <h2>prix</h2>
+                </div>
+                <div class="article">
+                    <h1>shinode</h1>
+                    <img class="produit" src="onigiri.png" alt="" />
+                    <h2>prix</h2>
+                </div>
+            </div>
+            <h1>Nos Boissons</h1>
+            <div class="types" id="boissons">
+                <div class="article">
+                    <h1>shinode</h1>
+                    <img class="produit" src="onigiri.png" alt="" />
+                    <h2>prix</h2>
+                </div>
+                <div class="article">
+                    <h1>shinode</h1>
+                    <img class="produit" src="onigiri.png" alt="" />
+                    <h2>prix</h2>
+                </div>
+                <div class="article">
+                    <h1>shinode</h1>
+                    <img class="produit" src="onigiri.png" alt="" />
+                    <h2>prix</h2>
+                </div>
+            </div>
+            <h1>Nos box</h1>
+            <div class="types" id="box">
+                <div class="article">
+                    <h1>shinode</h1>
+                    <img class="produit" src="onigiri.png" alt="" />
+                    <h2>prix</h2>
+                </div>
+                <div class="article">
+                    <h1>shinode</h1>
+                    <img class="produit" src="onigiri.png" alt="" />
+                    <h2>prix</h2>
+                </div>
+                <div class="article">
+                    <h1>shinode</h1>
+                    <img class="produit" src="onigiri.png" alt="" />
+                    <h2>prix</h2>
+                </div>
+            </div>
+        </section>
+        <section class="about"></section>
+        <section class="contact"></section>
+    </main>
+    <script src="./js/app.js"></script>
+</body>
+<script>
+    stickyElem = document.querySelector(".sticky-div");
+
+    /* Gets the amount of height
+    of the element from the
+    viewport and adds the
+    pageYOffset to get the height
+    relative to the page */
+    currStickyPos = stickyElem.getBoundingClientRect().top + window.pageYOffset;
+
+    window.onscroll = function() {
+        /* Check if the current Y offset
+          is greater than the position of
+          the element */
+        if (window.pageYOffset > currStickyPos) {
+            stickyElem.style.position = "fixed";
+            stickyElem.style.top = "0px";
+        } else {
+            stickyElem.style.position = "relative";
+            stickyElem.style.top = "initial";
+        }
+    };
+</script>
+
+</html>
